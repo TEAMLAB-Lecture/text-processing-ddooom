@@ -41,7 +41,7 @@ def normalize(input_string):
     normalized_string = ""
     erase_space = False
     for i in string:
-        if erase_space and i.isalpha(): erase_space = False
+        if erase_space and i != " ": erase_space = False
         elif erase_space: continue
         elif i == " ": erase_space = True
         normalized_string += i
@@ -72,7 +72,7 @@ def no_vowels(input_string):
     """
     
     no_vowel_string = ""
-    vowels = ["a", "e", "i", "o", "u"]
+    vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
     for i in input_string:
         if i in vowels: continue
